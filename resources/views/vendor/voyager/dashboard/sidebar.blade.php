@@ -13,7 +13,7 @@
             </div><!-- .navbar-header -->
 
             <div class="panel widget center bgimage"
-                 style="background-image:url({{ asset('images/background_image.png') }}); background-size: cover; background-position: 0px;">
+                 style="background-image:url({{ asset('images/background_green.png') }}); background-size: cover; background-position: 0px;">
                 <div class="dimmer"></div>
                 <div class="panel-content">
                     <img src="{{ $user_avatar }}" class="avatar" alt="{{ Auth::user()->name }} avatar">
