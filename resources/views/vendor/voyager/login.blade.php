@@ -1,4 +1,4 @@
-@extends('voyager::auth.master')
+{{-- @extends('voyager::auth.master')
 
 @section('content')
     <div class="login-container">
@@ -83,4 +83,4 @@
         });
 
     </script>
-@endsection
+@endsection --}}
