@@ -10,13 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
     <!-- Favicon -->
-    <?php $admin_favicon = Voyager::setting('admin.icon_image', ''); ?>
-    @if($admin_favicon == '')
-        <link rel="shortcut icon" href="{{ voyager_asset('images/logo-icon.png') }}" type="image/png">
-    @else
-        <link rel="shortcut icon" href="{{ Voyager::image($admin_favicon) }}" type="image/png">
-    @endif
-
+    
+        <link rel="shortcut icon" href="{{ asset('images/mekeg_logo.png') }}" type="image/png">
+    
 
 
     <!-- App CSS -->
@@ -55,22 +51,24 @@
 <body class="voyager @if(isset($dataType) && isset($dataType->slug)){{ $dataType->slug }}@endif">
 
 <div id="voyager-loader">
-    <?php $admin_loader_img = Voyager::setting('admin.loader', ''); ?>
-    @if($admin_loader_img == '')
-        <img src="{{ voyager_asset('images/logo-icon.png') }}" alt="Voyager Loader">
-    @else
-        <img src="{{ Voyager::image($admin_loader_img) }}" alt="Voyager Loader">
-    @endif
+    
+        <img src="{{ asset('images/loader.png') }}" alt="Voyager Loader">
+    
 </div>
 
 <?php
 if (\Illuminate\Support\Str::startsWith(Auth::user()->avatar, 'http://') || \Illuminate\Support\Str::startsWith(Auth::user()->avatar, 'https://')) {
     $user_avatar = Auth::user()->avatar;
 } else {
-    $user_avatar = Voyager::image(Auth::user()->avatar);
-}
+    if(Auth::user()->avatar == 'users/default.png'){
+        $user_avatar = asset('images/default.png');
+        
+    }else {
+        $user_avatar = Voyager::image(Auth::user()->avatar);
+    }
+}   
 ?>
-
+  
 <div class="app-container">
     <div class="fadetoblack visible-xs"></div>
     <div class="row content-container">
