@@ -53,7 +53,7 @@
                         
                             <img class="img-responsive pull-left flip logo hidden-xs animated fadeIn" src="{{ asset('images/mekeg_logo.png') }}" alt="Logo Icon">
                        
-                        <div class="copy animated fadeIn">
+                        <div class="copy animated fadeIn mt-1">
                             <h1>MEKEG</h1>
                             
                         </div>

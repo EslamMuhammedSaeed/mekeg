@@ -1,11 +1,11 @@
-@extends('voyager::auth.master')
+@extends('auth.master')
 
 @section('content')
     <div class="login-container">
 
         <p>{{ __('voyager::login.signin_below') }}</p>
 
-        <form action="{{ route('voyager.login') }}" method="POST">
+        <form action="{{ route('login') }}" method="POST">
             {{ csrf_field() }}
             <div class="form-group form-group-default" id="emailGroup">
                 <label>{{ __('voyager::generic.email') }}</label>
