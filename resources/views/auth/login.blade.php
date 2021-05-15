@@ -1,4 +1,4 @@
-@extends('vendor.auth.master')
+@extends('vendor.voyager.auth.master')
 
 @section('content')
     
