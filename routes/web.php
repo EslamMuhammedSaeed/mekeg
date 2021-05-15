@@ -16,6 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/test', function () {
+    return Auth::user()->role;
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth','checkadmin'])->name('dashboard');
+
+require __DIR__.'/auth.php';
 
 
 Route::group(['prefix' => 'admin'], function () {
