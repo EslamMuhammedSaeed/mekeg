@@ -6,8 +6,12 @@
     <meta name="robots" content="none" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="description" content="admin login">
-    <title>@yield('title', 'Admin - '.Voyager::setting("admin.title"))</title>
+    <title>MEKEG</title>
     <link rel="stylesheet" href="{{ voyager_asset('css/app.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     @if (__('voyager::generic.is_rtl') == 'true')
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css">
         <link rel="stylesheet" href="{{ voyager_asset('css/rtl.css') }}">
@@ -51,9 +55,9 @@
                     <div class="logo-title-container">
                         
                         
-                            <img class="img-responsive pull-left flip logo hidden-xs animated fadeIn" src="{{ asset('images/mekeg_logo.png') }}" alt="Logo Icon">
+                        <img class="img-responsive pull-left flip logo hidden-xs animated fadeIn" src="{{ asset('images/mekeg_logo.png') }}" alt="Logo Icon">
                        
-                        <div class="copy animated fadeIn mt-1">
+                        <div class="copy animated fadeIn mt-2">
                             <h1>MEKEG</h1>
                             
                         </div>

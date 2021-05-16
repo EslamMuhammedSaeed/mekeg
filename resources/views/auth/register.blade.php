@@ -1,4 +1,129 @@
-<x-guest-layout>
+@extends('auth.master')
+
+@section('content')
+    <div class="login-container pt-0" style="top: 30%">
+        <div class="row mt-0 pt-0">
+             <img class="img-responsive pull-left flip logo animated fadeIn" src="{{ asset('images/mekeg_logo.png') }}" alt="Logo Icon">
+        </div>
+        
+
+        <p>{{ __('Register') }}</p>
+
+        <form action="{{ route('register') }}" method="POST">
+            {{ csrf_field() }}
+
+            {{-- <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus /> --}}
+            <div class="form-group form-group-default" id="nameGroup">
+                <label>{{__('Name')}}</label>
+                <div class="controls">
+                    <input type="text" name="name" id="name" value="{{ old('name') }}" placeholder="{{__('Name')}}" class="form-control" required autofocus>
+                </div>
+            </div>
+            <div class="form-group form-group-default" id="emailGroup">
+                <label>{{ __('Email') }}</label>
+                <div class="controls">
+                    <input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="{{ __('Email') }}" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="form-group form-group-default" id="passwordGroup">
+                <label>{{ __('Password') }}</label>
+                <div class="controls">
+                    <input type="password" name="password" placeholder="{{ __('Password') }}" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="form-group form-group-default" id="confirmPasswordGroup">
+                <label>{{ __('Confirm Password') }}</label>
+                <div class="controls">
+                    <input type="password" name="password_confirmation" id="password_confirmation" placeholder="{{ __('Confirm Password') }}" class="form-control" required>
+                </div>
+            </div>
+
+
+            <div class="flex items-center justify-end border-0 mt-4">
+                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
+                    {{ __('Already registered?') }}
+                </a>
+
+            </div>
+            <button type="submit" class="btn btn-block login-button">
+                <span class="signingin hidden"><span class="voyager-refresh"></span>  {{ __('Register') }}...</span>
+                <span class="signin">{{ __('Register') }}</span>
+            </button>
+            
+
+            
+            
+
+        </form>
+        
+
+        <div style="clear:both"></div>
+
+        @if(!$errors->isEmpty())
+            <div class="alert alert-red">
+                <ul class="list-unstyled">
+                    @foreach($errors->all() as $err)
+                        <li>{{ $err }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+    </div> <!-- .login-container -->
+@endsection
+
+@section('post_js')
+
+    <script>
+        var btn = document.querySelector('button[type="submit"]');
+        var form = document.forms[0];
+        var username = document.querySelector('[name="name"]');
+        var email = document.querySelector('[name="email"]');
+        var password = document.querySelector('[name="password"]');
+        var password_confirmation = document.querySelector('[name="password_confirmation"]');
+        btn.addEventListener('click', function(ev){
+            if (form.checkValidity()) {
+                btn.querySelector('.signingin').className = 'signingin';
+                btn.querySelector('.signin').className = 'signin hidden';
+            } else {
+                ev.preventDefault();
+            }
+        });
+        username.focus();
+        document.getElementById('nameGroup').classList.add("focused");
+
+        // Focus events for email and password fields
+        username.addEventListener('focusin', function(e){
+            document.getElementById('nameGroup').classList.add("focused");
+        });
+        username.addEventListener('focusout', function(e){
+            document.getElementById('nameGroup').classList.remove("focused");
+        });
+        email.addEventListener('focusin', function(e){
+            document.getElementById('emailGroup').classList.add("focused");
+        });
+        email.addEventListener('focusout', function(e){
+            document.getElementById('emailGroup').classList.remove("focused");
+        });
+
+        password.addEventListener('focusin', function(e){
+            document.getElementById('passwordGroup').classList.add("focused");
+        });
+        password.addEventListener('focusout', function(e){
+            document.getElementById('passwordGroup').classList.remove("focused");
+        });
+        password_confirmation.addEventListener('focusin', function(e){
+            document.getElementById('confirmPasswordGroup').classList.add("focused");
+        });
+        password_confirmation.addEventListener('focusout', function(e){
+            document.getElementById('confirmPasswordGroup').classList.remove("focused");
+        });
+
+    </script>
+@endsection
+{{-- <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
@@ -56,4 +181,4 @@
             </div>
         </form>
     </x-auth-card>
-</x-guest-layout>
+</x-guest-layout> --}}
