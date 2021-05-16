@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth','checkadmin','verified'])->name('dashboard');
+})->middleware(['auth','checkadmin'])->name('dashboard');
 
 Route::get('/email/verify',function(){
     return view();
