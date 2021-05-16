@@ -1,7 +1,7 @@
 @extends('auth.master')
 
 @section('content')
-    <div class="login-container pt-0" style="top: 30%">
+    <div class="login-container pt-0" style="top: 50%">
         {{-- <div class="row mt-0 pt-0">
              <img class="img-responsive pull-left flip logo animated fadeIn" src="{{ asset('images/mekeg_logo.png') }}" alt="Logo Icon">
         </div> --}}
