@@ -1,21 +1,21 @@
 @extends('auth.master')
 
 @section('content')
-    <div class="login-container">
+    <div class="login-container px-5">
 
         <p>{{ __('voyager::login.signin_below') }}</p>
 
         <form action="{{ route('login') }}" method="POST">
             {{ csrf_field() }}
-            <div class="form-group form-group-default" id="emailGroup">
-                <label>{{ __('voyager::generic.email') }}</label>
+            <div class="form-group form-group-default " id="emailGroup">
+                <label style="text-align: right !important;">{{ __('voyager::generic.email') }}</label>
                 <div class="controls">
                     <input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="{{ __('voyager::generic.email') }}" class="form-control" required>
                 </div>
             </div>
 
             <div class="form-group form-group-default" id="passwordGroup">
-                <label>{{ __('voyager::generic.password') }}</label>
+                <label style="text-align: right !important;">{{ __('voyager::generic.password') }}</label>
                 <div class="controls">
                     <input type="password" name="password" placeholder="{{ __('voyager::generic.password') }}" class="form-control" required>
                 </div>
@@ -35,7 +35,7 @@
                 
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900 mt-2 ml-2" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
+                        {{ __('auth.Forgot your password?') }}
                     </a>
             @endif
             </div>

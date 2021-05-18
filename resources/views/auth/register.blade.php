@@ -1,55 +1,55 @@
 @extends('auth.master')
 
 @section('content')
-    <div class="login-container pt-0" style="top: 50%">
+    <div class="login-container pt-0" style="top: 45%">
         {{-- <div class="row mt-0 pt-0">
              <img class="img-responsive pull-left flip logo animated fadeIn" src="{{ asset('images/mekeg_logo.png') }}" alt="Logo Icon">
         </div> --}}
         
 
-        <p>{{ __('Register') }}</p>
+        <p>{{ __('auth.Register') }}</p>
 
         <form action="{{ route('register') }}" method="POST">
             {{ csrf_field() }}
 
             {{-- <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus /> --}}
             <div class="form-group form-group-default" id="nameGroup">
-                <label>{{__('Name')}}</label>
+                <label>{{__('auth.Name')}}</label>
                 <div class="controls">
-                    <input type="text" name="name" id="name" value="{{ old('name') }}" placeholder="{{__('Name')}}" class="form-control" required autofocus>
+                    <input type="text" name="name" id="name" value="{{ old('name') }}" placeholder="{{__('auth.Name')}}" class="form-control" required autofocus>
                 </div>
             </div>
             <div class="form-group form-group-default" id="emailGroup">
-                <label>{{ __('Email') }}</label>
+                <label>{{ __('auth.Email') }}</label>
                 <div class="controls">
-                    <input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="{{ __('Email') }}" class="form-control" required>
+                    <input type="text" name="email" id="email" value="{{ old('email') }}" placeholder="{{ __('auth.Email') }}" class="form-control" required>
                 </div>
             </div>
 
             <div class="form-group form-group-default" id="passwordGroup">
-                <label>{{ __('Password') }}</label>
+                <label>{{ __('auth.Password') }}</label>
                 <div class="controls">
-                    <input type="password" name="password" placeholder="{{ __('Password') }}" class="form-control" required>
+                    <input type="password" name="password" placeholder="{{ __('auth.Password') }}" class="form-control" required>
                 </div>
             </div>
 
             <div class="form-group form-group-default" id="confirmPasswordGroup">
-                <label>{{ __('Confirm Password') }}</label>
+                <label>{{ __('auth.Confirm Password') }}</label>
                 <div class="controls">
-                    <input type="password" name="password_confirmation" id="password_confirmation" placeholder="{{ __('Confirm Password') }}" class="form-control" required>
+                    <input type="password" name="password_confirmation" id="password_confirmation" placeholder="{{ __('auth.Confirm Password') }}" class="form-control" required>
                 </div>
             </div>
 
 
             <div class="flex items-center justify-end border-0 mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
+                    {{ __('auth.Already registered?') }}
                 </a>
 
             </div>
             <button type="submit" class="btn btn-block login-button">
-                <span class="signingin hidden"><span class="voyager-refresh"></span>  {{ __('Register') }}...</span>
-                <span class="signin">{{ __('Register') }}</span>
+                <span class="signingin hidden"><span class="voyager-refresh"></span>  {{ __('auth.Register') }}...</span>
+                <span class="signin">{{ __('auth.Register') }}</span>
             </button>
             
 

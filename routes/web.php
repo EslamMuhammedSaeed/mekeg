@@ -14,9 +14,8 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\MainPageController::class,'index']);
+;
 
 Route::get('/dashboard', function () {
     return view('dashboard');
