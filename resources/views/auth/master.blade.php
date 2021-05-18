@@ -2,7 +2,8 @@
 <html lang="{{ config('app.locale') }}" dir="rtl">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {{-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> --}}
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="robots" content="none" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="description" content="admin login">
