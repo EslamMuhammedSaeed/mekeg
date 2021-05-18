@@ -8,7 +8,7 @@
     <meta name="description" content="admin login">
     <title>MEKEG</title>
     {{-- <link rel="stylesheet" href="{{ voyager_asset('css/app.css') }}"> --}}
-    <link rel="stylesheet" href="{{asset('css/voyager/app.css') }}">
+    <link rel="stylesheet" href="{{asset('css/voyager.css') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -21,10 +21,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    @if (__('voyager::generic.is_rtl') == 'true')
+    {{-- @if (__('voyager::generic.is_rtl') == 'true')
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css">
         <link rel="stylesheet" href="{{ voyager_asset('css/rtl.css') }}">
-    @endif
+    @endif --}}
     <style>
         body {
             /* background-image:url('{{ asset('images/background_green3.png') }}'); */
