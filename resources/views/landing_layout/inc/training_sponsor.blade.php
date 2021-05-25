@@ -7,16 +7,16 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="row text-center">
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-6">
                             <img src="../images/cert-icon.png">
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-6">
                             <img src="../images/cert-icon.png">
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-6">
                             <img src="../images/cert-icon.png">
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-6">
                             <img src="../images/cert-icon.png">
                         </div>
                     </div>

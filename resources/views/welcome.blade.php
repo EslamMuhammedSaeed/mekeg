@@ -18,6 +18,9 @@
         <!--Start section  training certification-->
         @include('landing_layout.inc.training_sponsor')
         @include('landing_layout.inc.expert_road')
+        @include('landing_layout.inc.trainings')
+        @include('landing_layout.inc.courses')
+        
         {{-- <section class="training-cert">
             <div class="container-fluid">
                 <div class="row">
@@ -60,53 +63,32 @@
         <!--end section  training certification-->
       
         <!--start section training-topics -->
-        <section class="training-topics text-right pt-2">
-            
-            <div class="container">
-                <div class="title my-4 mr-0">
-                    <div class="m-0 p-0 d-inline" style="display: inline">
-                        <img class="icon ml-4" src="../images/line-1.png">
+        
+
+
+        <div class="container-fluid">
+            <div class="row bg-ment">
+                <div class="col-lg-5 p-0">
+                    <img width="100%" height="100%"  src="{{url('/images/eval2.png')}}" alt="">
+                </div>
+                <div class="col-lg-7">
+                    
+                    <h2 class="text-right mt-4 mr-3 mb-4 text-green " style="color: #034939;border-right: orange solid 10px;">  {{$sections[1]->title}}</h2>
+                    <p class="text-right text-white mx-3 mt-3 mb-3" style="font-size: 16px"> 
+                        {{$sections[1]->description}}              
+                    </p>
+                    <div class="text-center mt-5 mb-4">
+                        <a href="#" class="btn text-white mx-2 px-5 shadow-sm mb-3 mb-md-0 " style="background-color: #034939">اكتشف المزيد</a>
+                        <a href="#" class="btn text-white mx-2 px-3  shadow-sm mb-3 mb-md-0 " style="background-color: orange;padding-top:7px;padding-bottom:7px">انشئ حساب لمؤسستك</a>
+        
                     </div>
                     
-                    <h2 >
-                        أهم موضوعات التدريب
-                    </h2> 
-                </div>
-                <div class="topics">
-                    <div class="row">
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                            <div class="topic position-relative">
-                                <div class="overlay"></div>
-                                <div class="content">
-                                    <a href="" class="title">الإدارةلمالية</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                            <div class="topic position-relative">
-                                <div class="overlay"></div>
-                                <div class="content">
-                                    <a href="" class="title">الإدارةلمالية</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                            <div class="topic position-relative">
-                                <div class="overlay"></div>
-                                <div class="content">
-                                    <a href="" class="title">الإدارةلمالية</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center mt-md-5 mt-3">
-                        <a href="#" class="btn btn-show-more ml-3">
-                            اكتشف كل الموضوعات
-                        </a>
-                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+
+        @include('landing_layout.inc.carousal_team')
+        {{-- <section class="training-cert">
         <!--End section training-topics -->
         <!--start section most recent trainings-->
         {{-- <section class="recent-trainings">

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
+// use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,15 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 Route::get('/', [App\Http\Controllers\MainPageController::class,'index']);
 ;
+Route::get('/test', function(){
+    return view('foundation.test');
+});
+Route::post('/uploadfile', [App\Http\Controllers\FoundationController::class,'test']);
+
+Route::get('/create_foundation', [App\Http\Controllers\FoundationController::class,'create']);
+
+Route::post('/create_foundation',[App\Http\Controllers\FoundationController::class,'store']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

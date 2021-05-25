@@ -8,13 +8,13 @@
                     </div>
                     
                     <h2 >
-                        {{$section2->title}}
+                        {{$sections[0]->title}}
                     </h2> 
                 </div>    
                        
                     
                 <p class="mx-3">
-                    {{$section2->description}} 
+                    {{$sections[0]->description}} 
                 </p>
                 <div class="text-left mt-5 mb-3">
                     <a href="#" class="btn btn-show-more ml-3">

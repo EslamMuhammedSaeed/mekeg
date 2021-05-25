@@ -12,9 +12,10 @@ class MainPageController extends Controller
     //
     public function index(){
         $slides = Slide::all();
-        $section2 = Text::first();
+        $sections = Text::all();
+        
         // dd($slides);
-        return view('welcome',compact('slides','section2'));
+        return view('welcome',compact('slides','sections'));
 
 
     }

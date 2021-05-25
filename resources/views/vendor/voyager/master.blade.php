@@ -31,13 +31,14 @@
             border-color:{{ config('voyager.primary_color','#22A7F0') }};
         }
         .widget .btn-primary{
-            border-color:{{ config('voyager.primary_color','#22A7F0') }};
+            border-color:#00775e !important;
+            background: #00775e !important;
         }
         .widget .btn-primary:focus, .widget .btn-primary:hover, .widget .btn-primary:active, .widget .btn-primary.active, .widget .btn-primary:active:focus{
-            background:{{ config('voyager.primary_color','#22A7F0') }};
+            background:#00775e};
         }
         .voyager .breadcrumb a{
-            color:{{ config('voyager.primary_color','#22A7F0') }};
+            color:#00775e;
         }
     </style>
 
