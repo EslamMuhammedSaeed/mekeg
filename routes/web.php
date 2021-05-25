@@ -20,6 +20,10 @@ Route::get('/', [App\Http\Controllers\MainPageController::class,'index']);
 Route::get('/test', function(){
     return view('foundation.test');
 });
+
+Route::get('/test2', function(){
+    return view('user.master');
+});
 Route::post('/uploadfile', [App\Http\Controllers\FoundationController::class,'test']);
 
 Route::get('/create_foundation', [App\Http\Controllers\FoundationController::class,'create']);
